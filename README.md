@@ -1,6 +1,6 @@
 # NovaHQ 3DI/3DO/PAK to OBJ Converter
 
-Visit [https://novahq.net](https://novahq.net) and [https://github.com/Novahq-net](https://github.com/Novahq-net) for more on NovaLogic file formats and tools.
+Visit [https://novahq.net](https://novahq.net) and [https://github.com/Novahq-net/NovaResearch](https://github.com/Novahq-net/NovaResearch) for more on NovaLogic file formats and tools.
 
 ## Nova3di
 
