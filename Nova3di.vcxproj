@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <RootNamespace>Nova3di</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)build\Debug\</OutDir>
+    <IntDir>$(ProjectDir)build\Debug\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)build\Release\</OutDir>
+    <IntDir>$(ProjectDir)build\Release\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\util\log.cpp" />
+    <ClCompile Include="src\util\io.cpp" />
+    <ClCompile Include="src\util\bfc.cpp" />
+    <ClCompile Include="src\util\cbin.cpp" />
+    <ClCompile Include="src\util\lzp1.cpp" />
+    <ClCompile Include="src\util\scr1.cpp" />
+    <ClCompile Include="src\texture\pcx.cpp" />
+    <ClCompile Include="src\texture\tga.cpp" />
+    <ClCompile Include="src\texture\dds.cpp" />
+    <ClCompile Include="src\model\filters.cpp" />
+    <ClCompile Include="src\texture\palette.cpp" />
+    <ClCompile Include="src\texture\parse.cpp" />
+    <ClCompile Include="src\texture\write.cpp" />
+    <ClCompile Include="src\model\model.cpp" />
+    <ClCompile Include="src\model\converter.cpp" />
+    <ClCompile Include="src\writer\obj.cpp" />
+    <ClCompile Include="src\writer\mtl.cpp" />
+    <ClCompile Include="src\writer\extras.cpp" />
+    <ClCompile Include="src\writer\debug.cpp" />
+    <ClCompile Include="src\writer\export.cpp" />
+    <ClCompile Include="src\format\gpm.cpp" />
+    <ClCompile Include="src\format\t3do.cpp" />
+    <ClCompile Include="src\format\t3di3.cpp" />
+    <ClCompile Include="src\format\t3di.cpp" />
+    <ClCompile Include="src\format\pak.cpp" />
+    <ClCompile Include="src\composite\ocf.cpp" />
+    <ClCompile Include="src\composite\ai.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\util\types.h" />
+    <ClInclude Include="src\util\log.h" />
+    <ClInclude Include="src\util\io.h" />
+    <ClInclude Include="src\util\bfc.h" />
+    <ClInclude Include="src\util\cbin.h" />
+    <ClInclude Include="src\util\lzp1.h" />
+    <ClInclude Include="src\util\scr1.h" />
+    <ClInclude Include="src\texture\pcx.h" />
+    <ClInclude Include="src\texture\tga.h" />
+    <ClInclude Include="src\texture\dds.h" />
+    <ClInclude Include="src\model\filters.h" />
+    <ClInclude Include="src\texture\palette.h" />
+    <ClInclude Include="src\texture\parse.h" />
+    <ClInclude Include="src\texture\write.h" />
+    <ClInclude Include="src\model\model.h" />
+    <ClInclude Include="src\model\converter.h" />
+    <ClInclude Include="src\writer\obj.h" />
+    <ClInclude Include="src\writer\mtl.h" />
+    <ClInclude Include="src\writer\extras.h" />
+    <ClInclude Include="src\writer\debug.h" />
+    <ClInclude Include="src\writer\export.h" />
+    <ClInclude Include="src\format\gpm.h" />
+    <ClInclude Include="src\format\t3do.h" />
+    <ClInclude Include="src\format\t3di3.h" />
+    <ClInclude Include="src\format\t3di.h" />
+    <ClInclude Include="src\format\pak.h" />
+    <ClInclude Include="src\composite\ocf.h" />
+    <ClInclude Include="src\composite\ai.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\main.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

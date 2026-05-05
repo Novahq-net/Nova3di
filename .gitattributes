@@ -1,0 +1,33 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+*.sh      text  eol=lf
+
+*.sln     text  eol=crlf
+*.csproj  text  eol=crlf
+*.bat     text  eol=crlf
+*.cmd     text  eol=crlf
+*.ps1     text  eol=crlf
+
+*.cs      text  diff=csharp
+*.resx    text
+*.c       text
+*.cpp     text
+*.cxx     text
+*.h       text
+*.hxx     text
+*.py      text
+*.html    text
+*.htm     text
+*.css     text
+*.scss    text
+*.js      text
+*.sql     text
+
+*.jpg  	  binary
+*.png 	  binary
+*.gif 	  binary
+*.7z      binary
+*.zip     binary
+*.rar     binary
+*.exe     binary
